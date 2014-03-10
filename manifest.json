@@ -1,0 +1,25 @@
+﻿{
+  "name": "Douban.Hack",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Hack for douban.fm",
+  "content_scripts":
+  [
+    {
+      "js":
+      [
+        "deps/jquery/jquery.min.js",
+        "assets/scripts/scripts.js"
+      ],
+      "css": [
+        "assets/styles/style.css"
+      ],
+      "matches":
+      [
+        "http://*.douban.fm/*"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
