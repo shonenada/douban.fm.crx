@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "manifest_version": 2,
   "description": "Hack for douban.fm",
+  "permissions": ["http://*/*", "https://*/*"],
   "content_scripts":
   [
     {
       "js":
       [
-        "deps/jquery/jquery.min.js",
+        "deps/jQuery/jquery.js",
         "assets/scripts/scripts.js"
       ],
       "css": [
@@ -16,7 +17,8 @@
       ],
       "matches":
       [
-        "http://*.douban.fm/*"
+        "http://douban.fm/",
+        "http://douban.fm/?start=*"
       ],
       "run_at": "document_end",
       "all_frames": true
