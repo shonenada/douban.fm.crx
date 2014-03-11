@@ -1,9 +1,30 @@
-﻿(function(){
-    var simulate_sec = $('#simulate-sec');
+﻿(function(window, $) {
 
-    var cycle_src = $('<div id="cycle-sec"></div>');
+    function injectScript(func) {
+        var script = document.createElement('script');
+        script.textContent = '(' + func.toString() +')();';
+        document.body.appendChild(script);
+    }
 
-    var wrapper = $('<div class="wrapper"></div>');
-    var cycle_btn = $('<div id="cycle-btn"></div>').append($('<a id="cycle-img"></a>')).append($('<span id="cycle-info">单曲循环</span>'));
-    wrapper.prepend(cycle_btn);
-})();
+    function hackFM() {
+        function scriptToInject() {
+            (function anonymous() {
+                console.log(window.extStatusHandler);
+                if (!!window.extStatusHandler) {
+                    var oldHandler = window.extStatusHandler;
+                    window.extStatusHandler = function (obj) {
+                        console.log(JSON.parse(obj));
+                        oldHandler(obj);
+                    }
+                }
+                else {
+                    setTimeout(anonymous, 500);
+                };
+            })();
+        };
+        injectScript(scriptToInject);
+    };
+
+    hackFM();
+
+})(window, jQuery);
