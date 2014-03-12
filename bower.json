@@ -1,7 +1,0 @@
-{
-    "name": "douban.fm.crx",
-    "version": "0.1",
-    "dependencies": {
-        "jQuery": "1.6.2"
-    }
-}

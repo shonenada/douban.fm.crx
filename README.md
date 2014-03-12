@@ -2,7 +2,7 @@ Douban.FM.crx
 =============
 Let's hack for douban.fm.
 
-![Hack for douban.fm](http://shonenada.github.io/douban.fm.crx/images/preview.png)
+![Hack for douban.fm](http://shonenada.github.io/douban.fm.crx/douban.fm.crx/images/preview.png)
 
 
 Introduction
@@ -14,8 +14,8 @@ Installation
 ------------
 Douban.FM.crx 还在开发中，并木有发布到 Google Web Store 上，需要手动安装。安装方法：
 
-1. 点击[这里](http://shonenada.github.io/douban.fm.crx/downloads/last.zip)下载插件，并解压。
-2. 在 Chrome 下打开[扩展程序](chrome://extensions)标签。
+1. 点击[这里](https://github.com/shonenada/douban.fm.crx/zipball/last)下载插件，并解压。
+2. 在 Chrome 下打开[扩展程序](chrome://extensions/)标签。
 3. 将 douban.fm.crx 拖进扩展程序标签。
 
 
