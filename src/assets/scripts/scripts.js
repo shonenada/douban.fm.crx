@@ -82,6 +82,13 @@
             else {
                 setTimeout(hackFM, 500);
             };
+
+            $('body').keypress(function (key){
+                if (key.charCode == 97 || key.charCode == 65){
+                    console.log(key)
+                    $('#cycleWrapper').click();
+                }
+            });
         };
         injectScript(hackFM);
     };
