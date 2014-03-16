@@ -42,10 +42,10 @@
 
         simulate.append(cycleWrapper);
 
-        cycleWrapper.mouseenter(function(){
+        cycleWrapper.mouseenter(function (){
             $(this).addClass('cycleHover');
         });
-        cycleWrapper.mouseleave(function() {
+        cycleWrapper.mouseleave(function () {
             $(this).removeClass('cycleHover');
         })
 
@@ -78,16 +78,15 @@
                         }
                     }
                 }
+                $(document).keypress(function (key){
+                    if (key.charCode == 97 || key.charCode == 65){
+                        $('#cycleWrapper').click();
+                    }
+                });
             }
             else {
                 setTimeout(hackFM, 500);
             };
-
-            $('body').keypress(function (key){
-                if (key.charCode == 97 || key.charCode == 65){
-                    $('#cycleWrapper').click();
-                }
-            });
         };
         injectScript(hackFM);
     };
