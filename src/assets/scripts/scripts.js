@@ -85,7 +85,6 @@
 
             $('body').keypress(function (key){
                 if (key.charCode == 97 || key.charCode == 65){
-                    console.log(key)
                     $('#cycleWrapper').click();
                 }
             });
