@@ -82,6 +82,14 @@
                     if (key.charCode == 97 || key.charCode == 65){
                         $('#cycleWrapper').click();
                     }
+                    if (key.charCode == 113 || key.charCode == 81){
+                        var song = $D.get('currentSong');
+                        var songInfo = {
+                            start: song.id + 'g' + song.ssid + 'g',
+                        }
+                        set_cookie(songInfo, 365, 'douban.fm');
+                        DBR.act('skip');
+                    }
                 });
             }
             else {
